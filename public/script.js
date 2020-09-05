@@ -86,6 +86,10 @@ socket.on('user-connected', userId => {
     console.log("User Connected " + userId)
  })
 
+const scrollToBottom = () => {
+  var d = $('.main__chat_window');
+  d.scrollTop(d.prop("scrollHeight"));
+}
 
  const muteUnmute = () => {
     const enabled = myVideoStream.getAudioTracks()[0].enabled;
